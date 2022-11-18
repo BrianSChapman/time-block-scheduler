@@ -5,14 +5,36 @@ $(function () {
 
   var todaysDate = dayjs();
   $('#currentDay').text(todaysDate.format('MMMM D, YYYY'));
+  
+//     var textBlock = getItem("text");
+//     var saveBtn = $('.saveBtn');
+   
+//       saveBtn.on('click', function(){
+//       localStorage.setItem("text",textBlock);
+      
+
+// });
+var currentHour = day.js().hour();
+  // var textArea = $('.description');
+  // for (let i = 0; i < textArea.length; i++) {
+  //   textArea.length = array[i];
+  // }
+  //   var textEntries = textArea 
+    
+  
+    if ('#hour-9'< currentHour) {
+      $('div').toggleClass('.past', true);
+
+    }   else if('#hour-9'=== currentHour) {
+        $('div').toggleClass('.present', true);
+      
+    }    else {
+        $('div').toggleClass('.future', true);
+    }
+    
+
+
  
-  var saveBtn = $('.saveBtn');
-  saveBtn.on('click', function(){
-
-
-
-
-});
 
 
   // TODO: Add a listener for click events on the save button. This code should
@@ -32,5 +54,5 @@ $(function () {
   // the values of the corresponding textarea elements. HINT: How can the id
   // attribute of each time-block be used to do this?
   //
-  // TODO: Add code to display the current date in the header of the page.
+  
 });
