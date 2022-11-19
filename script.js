@@ -20,17 +20,25 @@ $(function () {
           localStorage.setItem('entryTime', entryTime);
         
 });
+          var currentHour = dayjs().format('H');
+          
+          var textArea = $('.description');
 
- 
-  var currentHour = dayjs().hour();
+          for (var i = 17; i < textArea.length; i++) {
+          var loopTotal = textArea.length[i].id; 
+          
+        
+}
+        
+          if ( loopTotal < currentHour) {
+          textArea.addClass('.past');
 
-  var textArea = $('.description');
-  for (var i = 17; i < textArea.length; i++) {
-    // var
-  }
-    // var textEntries = textArea 
-    // var timeBlock = $('div');
-    //     var textArea = $('.description');
+}     else if( loopTotal === currentHour) {
+     textArea.addClass('.present');
+    
+}    else {
+     textArea.addClass('.future');
+}
  
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
