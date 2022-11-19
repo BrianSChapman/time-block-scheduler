@@ -3,40 +3,35 @@
 // in the html.
 $(function () {
 
+  // Utilized dayjs to incorporate the current date to the page
   var todaysDate = dayjs();
   $('#currentDay').text(todaysDate.format('MMMM D, YYYY'));
-  
-//     var textBlock = getItem("text");
-//     var saveBtn = $('.saveBtn');
-   
-//       saveBtn.on('click', function(){
-//       localStorage.setItem("text",textBlock);
+ 
+  //      var textBlock = localstorage.getItem("text");
+      var saveBtn = $('.saveBtn');
       
-
-// });
-var currentHour = day.js().hour();
-  // var textArea = $('.description');
-  // for (let i = 0; i < textArea.length; i++) {
-  //   textArea.length = array[i];
-  // }
-  //   var textEntries = textArea 
-    
-  
-    if ('#hour-9'< currentHour) {
-      $('div').toggleClass('.past', true);
-
-    }   else if('#hour-9'=== currentHour) {
-        $('div').toggleClass('.present', true);
-      
-    }    else {
-        $('div').toggleClass('.future', true);
-    }
-    
-
+     
+        saveBtn.on('click', function(event){
+          event.preventDefault();
+        
+          var textBlock = $(this).parent().children(".description").val();
+          localStorage.setItem('textInput', textBlock);
+          var entryTime = $(this).parent().attr('id');
+          localStorage.setItem('entryTime', entryTime);
+        
+});
 
  
+  var currentHour = dayjs().hour();
 
-
+  var textArea = $('.description');
+  for (var i = 17; i < textArea.length; i++) {
+    // var
+  }
+    // var textEntries = textArea 
+    // var timeBlock = $('div');
+    //     var textArea = $('.description');
+ 
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
   // local storage. HINT: What does `this` reference in the click listener
