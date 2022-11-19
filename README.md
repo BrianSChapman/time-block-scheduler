@@ -13,4 +13,6 @@ To add a screenshot, create an `assets/images` folder in your repository and upl
 
     
     ![Screenshot of Hour Planner](/assets/Screenshot_20221118_112448.png)
+    
+    Link to the deployed application: https://brianschapman.github.io/time-block-scheduler/
 
